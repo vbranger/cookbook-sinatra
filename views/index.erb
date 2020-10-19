@@ -1,0 +1,9 @@
+<ul>
+  <% @recipe_list.each_with_index do |recipe, index| %>
+    <li>
+      <%= "#{index + 1}. [#{recipe.mark ? 'x' : ' '}] #{recipe.name} (#{recipe.rating} / 5) - #{recipe.prep_time}"%> <a href="/destroy/<%=index%>">Destroy</a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/new">New</a>
